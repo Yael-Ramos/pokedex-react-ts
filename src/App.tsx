@@ -46,9 +46,10 @@ function App() {
       </div>
 
       {/* Grid principal */}
-      <div className="grid grid-cols-5 grid-rows-5 gap-8 w-full max-w-6xl">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full max-w-6xl">
         {/* Lista de Pokémon */}
-        <div className="row-span-4 col-start-2 row-start-2 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-6 flex flex-col justify-between border border-white/20 transition transform hover:scale-105 hover:shadow-2xl">
+        <div className="lg:col-span-5 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-6 flex flex-col
+         justify-between border border-white/20 transition transform hover:scale-105 hover:shadow-2xl">
           <h2 className="text-2xl font-semibold text-emerald-300 mb-4">
             Lista de Pokémon
           </h2>
@@ -72,7 +73,7 @@ function App() {
         </div>
 
         {/* Card de Pokémon */}
-        <div className="row-span-4 col-start-4 row-start-2 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-6 flex flex-col justify-between border border-white/20 transition transform hover:scale-105 hover:shadow-2xl">
+        <div className="lg:col-span-7 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-6 flex flex-col justify-between border border-white/20 transition transform hover:scale-105 hover:shadow-2xl">
           <h2 className="text-2xl font-semibold text-emerald-300 mb-4">
             Card de Pokémon
           </h2>
