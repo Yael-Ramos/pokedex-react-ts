@@ -58,12 +58,22 @@ function App() {
               pokemons.map((poke, index) => (
                 <div
                   key={index}
-                  className="p-2 bg-white/5 rounded-lg hover:bg-emerald-600/30 cursor-pointer transition"
+                  className="group flex items-center justify-between p-3 rounded-xl bg-white/5 hover:bg-white/10 border 
+                  border-white/10 hover:border-cyan-400/50 cursor-pointer transition shadow-sm"
                   // TODO: PISTA 4 - debe manejar el click para seleccionar un Pokémon
                   onClick={() => getPokemon(index + 1)}
                 >
                   {/* TODO: PISTA 5 - debe mostrar el nombre del Pokémon */}
-                  <span>{poke.name}</span>
+                  <div className='flex items-center space-x-3 min-w-0'>
+                    <span className='text-xs font-mono text-slate-400 font-semibold'>#{String (index + 1).padStart(3, '0')}</span>
+                    <div className='flex flex-col min-w-0'>
+                  <span className='text-sm font-bold text-slate-100 group-hover:text-cyan-300 transition-colors uppercase tracking-wide'>
+                    {poke.name}
+                    </span>
+                    <span className='text-[10px] font-mono text-slate-400'>Especimen Kanto</span>
+                    </div>
+                  </div>
+                  <span className='text-cyan-400 text-xs font-mono'>&gt;</span>
                 </div>
               ))
             ) : (
